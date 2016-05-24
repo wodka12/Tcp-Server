@@ -1,0 +1,12 @@
+﻿  sds.c
+  net.c
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(339): warning C4133: '함수': 'WCHAR *'과(와) 'const char *' 사이의 형식이 호환되지 않습니다.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(355): warning C4477: '_snprintf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'WCHAR *'입니다.
+  e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(355): note: 서식 문자열에서 '%ls'을(를) 사용하는 것이 좋습니다.
+  e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(355): note: 서식 문자열에서 '%lls'을(를) 사용하는 것이 좋습니다.
+  e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(355): note: 서식 문자열에서 '%Ls'을(를) 사용하는 것이 좋습니다.
+  e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(355): note: 서식 문자열에서 '%ws'을(를) 사용하는 것이 좋습니다.
+  hiredis.c
+  async.c
+  코드를 생성하고 있습니다...
+  hiredis.vcxproj -> E:\Projects\contextSwitch.v12 saisin2\x64\Debug\hiredis.lib

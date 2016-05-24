@@ -1,0 +1,44 @@
+﻿  net.c
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(80): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(140): error C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(178): note: 'strerror' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(326): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(355): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(368): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\net.c(395): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+  hiredis.c
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(224): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(226): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(227): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(228): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(229): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(230): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(233): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(235): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(246): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(887): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 'sprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(889): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 'sprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(963): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 'sprintf' 선언을 참조하십시오.
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\hiredis.c(966): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 'sprintf' 선언을 참조하십시오.
+  async.c
+e:\projects\contextswitch.v12 saisin2\contextswitch\hiredis\deps\hiredis\async.c(487): error C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1952): note: '_snprintf' 선언을 참조하십시오.
+  코드를 생성하고 있습니다...
