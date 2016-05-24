@@ -42,4 +42,6 @@ bool CMysql::initialize_mysql(void)
 
 	return true;
 	//printf(mysql_get_client_info());
+
+
 }
