@@ -1,0 +1,16 @@
+E:\Projects\contextSwitch.v12 saisin2\tcp_client_new\bin\Debug\tcp_client_new.exe.config
+E:\Projects\contextSwitch.v12 saisin2\tcp_client_new\bin\Debug\tcp_client_new.exe
+E:\Projects\contextSwitch.v12 saisin2\tcp_client_new\bin\Debug\tcp_client_new.pdb
+E:\Projects\contextSwitch.v12 saisin2\tcp_client_new\obj\Debug\tcp_client_new.tcp_client.resources
+E:\Projects\contextSwitch.v12 saisin2\tcp_client_new\obj\Debug\tcp_client_new.Properties.Resources.resources
+E:\Projects\contextSwitch.v12 saisin2\tcp_client_new\obj\Debug\tcp_client_new.csproj.GenerateResource.Cache
+E:\Projects\contextSwitch.v12 saisin2\tcp_client_new\obj\Debug\tcp_client_new.exe
+E:\Projects\contextSwitch.v12 saisin2\tcp_client_new\obj\Debug\tcp_client_new.pdb
+E:\Projects\contextSwitch.v12 saisin22\tcp_client_new\bin\Debug\tcp_client_new.exe.config
+E:\Projects\contextSwitch.v12 saisin22\tcp_client_new\bin\Debug\tcp_client_new.exe
+E:\Projects\contextSwitch.v12 saisin22\tcp_client_new\bin\Debug\tcp_client_new.pdb
+E:\Projects\contextSwitch.v12 saisin22\tcp_client_new\obj\Debug\tcp_client_new.tcp_client.resources
+E:\Projects\contextSwitch.v12 saisin22\tcp_client_new\obj\Debug\tcp_client_new.Properties.Resources.resources
+E:\Projects\contextSwitch.v12 saisin22\tcp_client_new\obj\Debug\tcp_client_new.csproj.GenerateResource.Cache
+E:\Projects\contextSwitch.v12 saisin22\tcp_client_new\obj\Debug\tcp_client_new.exe
+E:\Projects\contextSwitch.v12 saisin22\tcp_client_new\obj\Debug\tcp_client_new.pdb
