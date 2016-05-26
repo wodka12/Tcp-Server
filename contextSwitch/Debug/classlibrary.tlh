@@ -1,0 +1,64 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.00.23918.0 (87f0af97).
+//
+// e:\github\source\contextswitch\debug\classlibrary.tlh
+//
+// C++ source equivalent of Win32 type library ClassLibrary.tlb
+// compiler-generated file created 05/25/16 at 11:25:04 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace ClassLibrary {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("02bc223d-393e-45e0-8273-817b0158f7da"))
+/* LIBID */ __ClassLibrary;
+struct /* coclass */ CShapSample;
+struct __declspec(uuid("61ea822a-82bc-4cce-a0bf-5a24855ff613"))
+/* dual interface */ ICShapSample;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ICShapSample, __uuidof(ICShapSample));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("36ea856c-99e3-4365-b157-6c0d75173f48"))
+CShapSample;
+    // interface _Object
+    // [ default ] interface ICShapSample
+
+struct __declspec(uuid("61ea822a-82bc-4cce-a0bf-5a24855ff613"))
+ICShapSample : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ShowMessage ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ShowMessage ( ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "e:\github\source\contextswitch\debug\classlibrary.tli"
+
+} // namespace ClassLibrary
+
+#pragma pack(pop)

@@ -73,8 +73,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\mysql-5.6.30-winx64\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\mysql-5.6.30-winx64\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\local\boost_1_61_0;E:\GitHub\source\contextSwitch\mq\include;E:\GitHub\source\contextSwitch\mq\include\SimpleAmqpClient;C:\mysql-5.6.30-winx64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\mysql-5.6.30-winx64\lib;E:\GitHub\source\contextSwitch\mq\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -112,8 +112,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libmysql.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);Ws2_32.lib;Winmm.lib;lib_acl_cpp_vc2015d.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>E:\Projects\contextSwitch.v12 saisin2\contextSwitch;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SimpleAmqpClient.2.lib;SimpleAmqpClient.2d.lib;libmysql.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);Ws2_32.lib;Winmm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\GitHub\source\contextSwitch;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

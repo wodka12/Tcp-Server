@@ -1,33 +1,33 @@
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\contextswitch.pch
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\vc140.pdb
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\vc140.idb
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\stdafx.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\acceptor.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\clientmanager.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\contextswitch.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\croom.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\croom_manager.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\cworld.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\disconnector.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\mysql.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\network.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\object.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\objmanager.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\pcmonster.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\receiver.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\redis.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\sender.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\tcpact.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\tcplistensocket.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\tcpsocket.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\userlobby.obj
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\act.obj
-e:\projects\contextswitch.v12 saisin22\x64\debug\contextswitch.ilk
-e:\projects\contextswitch.v12 saisin22\x64\debug\contextswitch.exe
-e:\projects\contextswitch.v12 saisin22\x64\debug\contextswitch.pdb
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\contextswitch.tlog\cl.command.1.tlog
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\contextswitch.tlog\cl.read.1.tlog
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\contextswitch.tlog\cl.write.1.tlog
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\contextswitch.tlog\link.command.1.tlog
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\contextswitch.tlog\link.read.1.tlog
-e:\projects\contextswitch.v12 saisin22\contextswitch\x64\debug\contextswitch.tlog\link.write.1.tlog
+e:\github\source\contextswitch\x64\debug\contextswitch.pch
+e:\github\source\contextswitch\x64\debug\vc140.pdb
+e:\github\source\contextswitch\x64\debug\vc140.idb
+e:\github\source\contextswitch\x64\debug\stdafx.obj
+e:\github\source\contextswitch\x64\debug\acceptor.obj
+e:\github\source\contextswitch\x64\debug\act.obj
+e:\github\source\contextswitch\x64\debug\clientmanager.obj
+e:\github\source\contextswitch\x64\debug\contextswitch.obj
+e:\github\source\contextswitch\x64\debug\croom.obj
+e:\github\source\contextswitch\x64\debug\croom_manager.obj
+e:\github\source\contextswitch\x64\debug\cworld.obj
+e:\github\source\contextswitch\x64\debug\disconnector.obj
+e:\github\source\contextswitch\x64\debug\mysql.obj
+e:\github\source\contextswitch\x64\debug\network.obj
+e:\github\source\contextswitch\x64\debug\object.obj
+e:\github\source\contextswitch\x64\debug\objmanager.obj
+e:\github\source\contextswitch\x64\debug\pcmonster.obj
+e:\github\source\contextswitch\x64\debug\receiver.obj
+e:\github\source\contextswitch\x64\debug\redis.obj
+e:\github\source\contextswitch\x64\debug\sender.obj
+e:\github\source\contextswitch\x64\debug\tcpact.obj
+e:\github\source\contextswitch\x64\debug\tcplistensocket.obj
+e:\github\source\contextswitch\x64\debug\tcpsocket.obj
+e:\github\source\contextswitch\x64\debug\userlobby.obj
+e:\github\source\x64\debug\contextswitch.ilk
+e:\github\source\x64\debug\contextswitch.exe
+e:\github\source\x64\debug\contextswitch.pdb
+e:\github\source\contextswitch\x64\debug\contextswitch.tlog\cl.command.1.tlog
+e:\github\source\contextswitch\x64\debug\contextswitch.tlog\cl.read.1.tlog
+e:\github\source\contextswitch\x64\debug\contextswitch.tlog\cl.write.1.tlog
+e:\github\source\contextswitch\x64\debug\contextswitch.tlog\link.command.1.tlog
+e:\github\source\contextswitch\x64\debug\contextswitch.tlog\link.read.1.tlog
+e:\github\source\contextswitch\x64\debug\contextswitch.tlog\link.write.1.tlog

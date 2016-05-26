@@ -1,6 +1,4 @@
-﻿Mysql.obj : error LNK2019: _mysql_error@4 외부 기호(참조 위치: "public: bool __thiscall CMysql::initialize_mysql(void)" (?initialize_mysql@CMysql@@QAE_NXZ) 함수)에서 확인하지 못했습니다.
-Mysql.obj : error LNK2019: _mysql_init@4 외부 기호(참조 위치: "public: bool __thiscall CMysql::initialize_mysql(void)" (?initialize_mysql@CMysql@@QAE_NXZ) 함수)에서 확인하지 못했습니다.
-Mysql.obj : error LNK2019: _mysql_real_connect@32 외부 기호(참조 위치: "public: bool __thiscall CMysql::initialize_mysql(void)" (?initialize_mysql@CMysql@@QAE_NXZ) 함수)에서 확인하지 못했습니다.
-Mysql.obj : error LNK2019: _mysql_close@4 외부 기호(참조 위치: "public: bool __thiscall CMysql::initialize_mysql(void)" (?initialize_mysql@CMysql@@QAE_NXZ) 함수)에서 확인하지 못했습니다.
-C:\mysql-5.6.30-winx64\lib\libmysql.lib : warning LNK4272: 'x64' 라이브러리 컴퓨터 종류가 'X86' 대상 컴퓨터 종류와 충돌합니다.
-E:\GitHub\source\Debug\contextSwitch.exe : fatal error LNK1120: 4개의 확인할 수 없는 외부 참조입니다.
+﻿  redis.cpp
+  Mysql.cpp
+  코드를 생성하고 있습니다...
+LINK : fatal error LNK1104: 'lib_acl_cpp_vc2015d.lib' 파일을 열 수 없습니다.
