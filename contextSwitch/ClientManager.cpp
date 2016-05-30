@@ -354,6 +354,7 @@ void ClientManager::recv_packet_user_join_room(int user_fd)
 	/**********************/
 	/* packet return      */
 	/**********************/
+#if 1
 	CStream* p_wStream = *pStreamSP;
 	BYTE send_packet[24];
 	USHORT p_Head = P_LOBBY_MSG;
@@ -385,6 +386,7 @@ void ClientManager::recv_packet_user_join_room(int user_fd)
 			printf("WSASend Error.. [%d] \n", WSAGetLastError());
 		}
 	}
+#endif
 
 }
 /* 2016.05.23 end */

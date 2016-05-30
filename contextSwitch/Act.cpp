@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "Act.h"
 #include "network.h"
 #include "ClientManager.h"
@@ -46,7 +46,8 @@ unsigned int WINAPI Proactor::ThreadProc(LPVOID lpParam)
 				printf("[%d] wsarecv error %d\n", __LINE__, WSAGetLastError());
 			}
 		}
-#if 1
+		/* 최초 반환패킷은 수신패킷 전용 스레드에서 처리하기로
+#if 0
 		ObjectUser* pObjUser = pClientManager->FindUser(p_Net->client_fd);
 		if (send(sInfo->fd,
 			(char*)&pObjUser->sUser_info,
@@ -56,7 +57,24 @@ unsigned int WINAPI Proactor::ThreadProc(LPVOID lpParam)
 		}
 
 		pClientManager->broadcast_success_login(sInfo->fd);
+#else
+		//ObjectUser* pObjUser = pClientManager->FindUser(p_Net->client_fd);
+		DWORD writen = 0;
+		// return message by send socket
+		if (WSASend(sInfo->fd,
+			(WSABUF*)&sInfo->dataBuf,
+			1,
+			(DWORD *)&writen,
+			0,
+			&sInfo->overlapped,
+			NULL) == SOCKET_ERROR) {
+			if (WSAGetLastError() != WSA_IO_PENDING) {
+				printf("WSASend Error.. [%d] \n", WSAGetLastError());
+			}
+		}
+
 #endif
+		*/
 	}
 	return 1;
 }
@@ -161,11 +179,13 @@ unsigned int WINAPI Proactor::WorkerThread(LPVOID lpParam)
 			sInfo->dataBuf.buf = pOverlappedEx->dataBuf.buf;
 			sInfo->IOOperation = ClientIoRead;
 			flags = 0;
+#if 1
 			if (WSARecv(sInfo->fd, &sInfo->dataBuf, 1, (DWORD *)&readn, (DWORD *)&flags, &(sInfo->overlapped), NULL) == SOCKET_ERROR) {
 				if (WSAGetLastError() != WSA_IO_PENDING) {
 					printf("wsarecv error %d\n", WSAGetLastError());
 				}
 			}
+#endif
 			break;
 		default:
 			break;
@@ -214,7 +234,6 @@ unsigned int WINAPI Proactor::SignalProc(LPVOID lpParam)
 	return 1;
 }
 /* 2016.05.24 */
-
 void Proactor::begin_thread_proc()
 {
 	hThread[cnt_thread] = (HANDLE)_beginthreadex(NULL, 0, ThreadProc, (LPVOID)this, 0, (unsigned int*)&dwThreadID[0]);

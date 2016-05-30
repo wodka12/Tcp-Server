@@ -56,7 +56,7 @@ bool CMysql::initialize_mysql(void)
 	AmqpClient::Channel::ptr_t m_channel = AmqpClient::Channel::Create("localhost");
 	if (m_channel != NULL)
 	{
-		m_channel->DeclareQueue("1");
+		m_channel->DeclareQueue("11");
 		m_channel->BindQueue("alanqueue", "amq.direct", "alankey");
 
 		AmqpClient::BasicMessage::ptr_t msg_in = AmqpClient::BasicMessage::Create();
