@@ -1,4 +1,2 @@
-﻿  redis.cpp
-  Mysql.cpp
-  코드를 생성하고 있습니다...
-LINK : fatal error LNK1104: 'lib_acl_cpp_vc2015d.lib' 파일을 열 수 없습니다.
+﻿  Mysql.cpp
+e:\github\source\contextswitch\mysql.cpp(14): fatal error C1083: 포함 파일을 열 수 없습니다. 'BasicMessage.h': No such file or directory

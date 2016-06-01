@@ -1,0 +1,14 @@
+﻿  stdafx.cpp
+  lobby_server.cpp
+e:\github\source\lobby_server\lobby_server.cpp(36): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1850): note: 'inet_addr' 선언을 참조하십시오.
+lobby_server.obj : error LNK2019: __imp__closesocket@4 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
+lobby_server.obj : error LNK2019: __imp__connect@12 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
+lobby_server.obj : error LNK2019: __imp__htons@4 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
+lobby_server.obj : error LNK2019: __imp__inet_addr@4 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
+lobby_server.obj : error LNK2019: __imp__recv@16 외부 기호(참조 위치: "unsigned int __stdcall RecvProc(void *)" (?RecvProc@@YGIPAX@Z) 함수)에서 확인하지 못했습니다.
+lobby_server.obj : error LNK2019: __imp__send@16 외부 기호(참조 위치: "unsigned int __stdcall ThreadProc(void *)" (?ThreadProc@@YGIPAX@Z) 함수)에서 확인하지 못했습니다.
+lobby_server.obj : error LNK2019: __imp__socket@12 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
+lobby_server.obj : error LNK2019: __imp__WSAStartup@8 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
+lobby_server.obj : error LNK2019: __imp__WSACleanup@0 외부 기호(참조 위치: _main 함수)에서 확인하지 못했습니다.
+E:\GitHub\source\Debug\lobby_server.exe : fatal error LNK1120: 9개의 확인할 수 없는 외부 참조입니다.

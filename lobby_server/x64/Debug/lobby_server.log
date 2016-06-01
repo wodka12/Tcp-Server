@@ -1,0 +1,4 @@
+﻿  lobby_server.cpp
+e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  lobby_server.vcxproj -> E:\GitHub\source\x64\Debug\lobby_server.exe

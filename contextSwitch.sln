@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcp_client", "tcp_client\tc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tcp_client_new", "tcp_client_new\tcp_client_new.csproj", "{9B7AA88E-1C56-40A7-9F8C-F3B033FAF1FF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lobby_server", "lobby_server\lobby_server.vcxproj", "{513BF559-1C99-4BF1-9674-F837B3700E96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,20 @@ Global
 		{9B7AA88E-1C56-40A7-9F8C-F3B033FAF1FF}.Release|Win32.ActiveCfg = Release|Any CPU
 		{9B7AA88E-1C56-40A7-9F8C-F3B033FAF1FF}.Release|x64.ActiveCfg = Release|Any CPU
 		{9B7AA88E-1C56-40A7-9F8C-F3B033FAF1FF}.Release|x64.Build.0 = Release|Any CPU
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Debug|Win32.ActiveCfg = Debug|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Debug|Win32.Build.0 = Debug|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Debug|x64.ActiveCfg = Debug|x64
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Debug|x64.Build.0 = Debug|x64
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Release|Any CPU.ActiveCfg = Release|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Release|Win32.ActiveCfg = Release|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Release|Win32.Build.0 = Release|Win32
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Release|x64.ActiveCfg = Release|x64
+		{513BF559-1C99-4BF1-9674-F837B3700E96}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

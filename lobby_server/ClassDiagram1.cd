@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Acceptor" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAEAgAAAAAAABAAAAAAACAAIAAAA=</HashCode>
+      <FileName>Acceptor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Act" Collapsed="true">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgQIAAAAAAAAAAAAAAAAgAAAAAAAAAEA=</HashCode>
+      <FileName>Act.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proactor" Collapsed="true">
+    <Position X="16.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABACQAABABAAgACACAAkQAABDQAACAAACEIGgAAQ=</HashCode>
+      <FileName>Act.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Actor" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAAAIIAAAA=</HashCode>
+      <FileName>Act.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTaskMutex" Collapsed="true">
+    <Position X="16.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAACAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Act.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTaskCSLock" Collapsed="true">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Act.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientManager" Collapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAIgwAARoEAGAARACCEBABABRASBBjAzARQAAIAAAgg=</HashCode>
+      <FileName>ClientManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacketStream" Collapsed="true">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAACAAgAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>ClientManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Croom" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAIAgAQAIAAAAEAAQAAAAGAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Croom.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Croom_manager" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACIABAAAgAAAAEAAAQAAAAAAAAEAIAAAAICA=</HashCode>
+      <FileName>Croom_manager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cworld" Collapsed="true">
+    <Position X="18.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAABAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cworld.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Disconnector" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgACAAAAAAAAAAAAACAAIAAAA=</HashCode>
+      <FileName>Disconnector.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMysql" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAA=</HashCode>
+      <FileName>Mysql.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Singleton&lt;T&gt;" Collapsed="true">
+    <Position X="18.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAACAAAAAAA=</HashCode>
+      <FileName>network.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="network" Collapsed="true">
+    <Position X="20.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAABAAIAAAAAAAAABAAAAAAgAAA=</HashCode>
+      <FileName>network.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAgAAAAAAAAAAAAAAAAAAAIAAAAAgA=</HashCode>
+      <FileName>Object.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectUser" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAEAAAAQAgAAAACAAAAAAAQAAABAAQAAAQgI=</HashCode>
+      <FileName>Object.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Receiver" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAEAAAAAAACAAIAAAA=</HashCode>
+      <FileName>Receiver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sender" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAACAAIIAAA=</HashCode>
+      <FileName>Sender.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TcpAct" Collapsed="true">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQIAAAAACAAAAAAAAgAAAAACAAAABAA=</HashCode>
+      <FileName>TcpAct.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TcpListenSocket" Collapsed="true">
+    <Position X="20.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TcpListenSocket.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TcpSocket" Collapsed="true">
+    <Position X="15" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAAAAAEABAYEAACAAJAIGEAgAoBAACAIAoAAA=</HashCode>
+      <FileName>TcpSocket.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUserLobby" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAA=</HashCode>
+      <FileName>UserLobby.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MySream::CStream" Collapsed="true">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAAAAICABAAAQBgAQAACBQACgAAAAAACAgACAAEA=</HashCode>
+      <FileName>network.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MySream::CStreamSP" Collapsed="true">
+    <Position X="20.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAgAAAAAIAAAAAAAACIAAAAA=</HashCode>
+      <FileName>network.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ClientInfo" Collapsed="true">
+    <Position X="12.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClientManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SOCKETINFO" Collapsed="true">
+    <Position X="15" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAIAAgAAAAAAQAQAAAAABAAg=</HashCode>
+      <FileName>network.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="st_NET_PACKET_HEADER" Collapsed="true">
+    <Position X="16.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAACAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>network.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="s_ClientInfo" Collapsed="true">
+    <Position X="12.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClientManager.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="IO_OPERATION" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>network.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PIO_OPERATION" Collapsed="true">
+    <Position X="4.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>network.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="e_packet_def" Collapsed="true">
+    <Position X="1.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Packet_def.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="e_packet_move_pos_def" Collapsed="true">
+    <Position X="11.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Packet_def.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="e_packet_User_Activity_def" Collapsed="true">
+    <Position X="8.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Packet_def.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="e_packet_lobby" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Packet_def.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="_IO_OPERATION" Collapsed="true">
+    <Position X="4.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>network.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="e_Packet" Collapsed="true">
+    <Position X="1.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAAAAAAAAAAAAQAAAAAAAAAAAAIiAQAAEA=</HashCode>
+      <FileName>Packet_def.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="e_Packet_Move_Pos" Collapsed="true">
+    <Position X="11.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAACAAAAAAAAQAAAAAgAAIAAAAADAAAAAAAA=</HashCode>
+      <FileName>Packet_def.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="e_Packet_User_Activity" Collapsed="true">
+    <Position X="8.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAABAAAAAAIAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Packet_def.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="e_Packet_User_Lobby" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAABAIAAAAAAEAAAA=</HashCode>
+      <FileName>Packet_def.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="メイリオ" Size="9" />
+</ClassDiagram>

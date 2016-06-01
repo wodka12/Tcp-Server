@@ -1,4 +1,48 @@
-﻿  ClientManager.cpp
+﻿  stdafx.cpp
+  UserLobby.cpp
+e:\github\source\contextswitch\object.h(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(127): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(139): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TcpSocket.cpp
+  TcpListenSocket.cpp
+  TcpAct.cpp
+  Sender.cpp
+  redis.cpp
+e:\github\source\contextswitch\object.h(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(127): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(139): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Receiver.cpp
+  pcMonster.cpp
+  ObjManager.cpp
+e:\github\source\contextswitch\object.h(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(127): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(139): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Object.cpp
+e:\github\source\contextswitch\object.h(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(127): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(139): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  network.cpp
+e:\github\source\contextswitch\object.h(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(127): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(139): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\network.cpp(51): warning C4244: '초기화 중': 'SOCKET'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Mysql.cpp
+  Disconnector.cpp
+  Cworld.cpp
+  Croom_manager.cpp
+e:\github\source\contextswitch\object.h(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(127): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(139): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Croom.cpp
+e:\github\source\contextswitch\object.h(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(127): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(139): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\croom.cpp(115): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  contextSwitch.cpp
+e:\github\source\contextswitch\object.h(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(127): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\contextswitch\object.h(139): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ClientManager.cpp
 e:\github\source\contextswitch\object.h(115): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\github\source\contextswitch\object.h(127): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\github\source\contextswitch\object.h(139): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
@@ -24,5 +68,6 @@ e:\github\source\contextswitch\act.cpp(131): warning C4477: 'printf' : 서식 �
   e:\github\source\contextswitch\act.cpp(131): note: 서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
   e:\github\source\contextswitch\act.cpp(131): note: 서식 문자열에서 '%Id'을(를) 사용하는 것이 좋습니다.
   e:\github\source\contextswitch\act.cpp(131): note: 서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+  Acceptor.cpp
   코드를 생성하고 있습니다...
   contextSwitch.vcxproj -> E:\GitHub\source\x64\Debug\contextSwitch.exe

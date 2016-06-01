@@ -17,9 +17,9 @@ E:\Projects\contextSwitch.v12 saisin22\tcp_client_new\obj\Debug\tcp_client_new.p
 E:\GitHub\source\tcp_client_new\bin\Debug\tcp_client_new.exe.config
 E:\GitHub\source\tcp_client_new\bin\Debug\tcp_client_new.exe
 E:\GitHub\source\tcp_client_new\bin\Debug\tcp_client_new.pdb
-E:\GitHub\source\tcp_client_new\obj\Debug\tcp_client_new.csprojResolveAssemblyReference.cache
 E:\GitHub\source\tcp_client_new\obj\Debug\tcp_client_new.tcp_client.resources
 E:\GitHub\source\tcp_client_new\obj\Debug\tcp_client_new.Properties.Resources.resources
 E:\GitHub\source\tcp_client_new\obj\Debug\tcp_client_new.csproj.GenerateResource.Cache
 E:\GitHub\source\tcp_client_new\obj\Debug\tcp_client_new.exe
 E:\GitHub\source\tcp_client_new\obj\Debug\tcp_client_new.pdb
+E:\GitHub\source\tcp_client_new\obj\Debug\tcp_client_new.csprojResolveAssemblyReference.cache
