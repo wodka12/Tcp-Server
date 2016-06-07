@@ -1,0 +1,63 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.00.23918.0 (b0b52b20).
+//
+// e:\github\source\lobby_server\x64\debug\testdll2.tlh
+//
+// C++ source equivalent of Win32 type library E:\GitHub\source\testdll2\bin\Debug\testdll2.tlb
+// compiler-generated file created 06/06/16 at 18:32:11 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace testdll2 {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("fa9af9af-c651-3727-87fb-e107d41173ea"))
+/* LIBID */ __testdll2;
+struct __declspec(uuid("0d643a48-cfff-3500-8fcd-e3b9aff9e6d4"))
+/* dual interface */ Class1;
+struct /* coclass */ ITestdll2;
+struct __declspec(uuid("0b82505a-fa73-385a-9607-960382473022"))
+/* dual interface */ _ITestdll2;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(Class1, __uuidof(Class1));
+_COM_SMARTPTR_TYPEDEF(_ITestdll2, __uuidof(_ITestdll2));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("0d643a48-cfff-3500-8fcd-e3b9aff9e6d4"))
+Class1 : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Add (
+        /*[in]*/ long Number1,
+        /*[in]*/ long Number2,
+        /*[out,retval]*/ long * pRetVal ) = 0;
+};
+
+struct __declspec(uuid("bc216b76-871b-3c2d-a02c-c8a8a2f735c9"))
+ITestdll2;
+    // [ default ] interface _ITestdll2
+    // interface _Object
+    // interface Class1
+
+struct __declspec(uuid("0b82505a-fa73-385a-9607-960382473022"))
+_ITestdll2 : IDispatch
+{};
+
+} // namespace testdll2
+
+#pragma pack(pop)

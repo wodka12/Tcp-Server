@@ -107,6 +107,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SimpleAmqpClient.2.lib;SimpleAmqpClient.2d.lib;libmysql.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);Ws2_32.lib;Winmm.lib</AdditionalDependencies>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -159,6 +160,7 @@
     <ClInclude Include="Packet_def.h" />
     <ClInclude Include="Receiver.h" />
     <ClInclude Include="Sender.h" />
+    <ClInclude Include="SimpleRpcClient.h" />
     <ClInclude Include="src_define.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -182,6 +184,7 @@
     <ClCompile Include="Receiver.cpp" />
     <ClCompile Include="redis.cpp" />
     <ClCompile Include="Sender.cpp" />
+    <ClCompile Include="SimpleRpcClient.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

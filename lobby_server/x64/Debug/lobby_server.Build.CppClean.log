@@ -16,6 +16,7 @@ e:\github\source\lobby_server\x64\debug\object.obj
 e:\github\source\lobby_server\x64\debug\receiver.obj
 e:\github\source\lobby_server\x64\debug\redis.obj
 e:\github\source\lobby_server\x64\debug\sender.obj
+e:\github\source\lobby_server\x64\debug\simplerpcclient.obj
 e:\github\source\lobby_server\x64\debug\tcpact.obj
 e:\github\source\lobby_server\x64\debug\tcplistensocket.obj
 e:\github\source\lobby_server\x64\debug\tcpsocket.obj
@@ -23,9 +24,14 @@ e:\github\source\lobby_server\x64\debug\userlobby.obj
 e:\github\source\x64\debug\lobby_server.ilk
 e:\github\source\x64\debug\lobby_server.exe
 e:\github\source\x64\debug\lobby_server.pdb
+e:\github\source\x64\debug\lobby_server.lib
+e:\github\source\x64\debug\lobby_server.exp
+e:\github\source\lobby_server\x64\debug\testdll2.tlh
+e:\github\source\lobby_server\x64\debug\test_dll.tlh
 e:\github\source\lobby_server\x64\debug\lobby_server.tlog\cl.command.1.tlog
 e:\github\source\lobby_server\x64\debug\lobby_server.tlog\cl.read.1.tlog
 e:\github\source\lobby_server\x64\debug\lobby_server.tlog\cl.write.1.tlog
 e:\github\source\lobby_server\x64\debug\lobby_server.tlog\link.command.1.tlog
 e:\github\source\lobby_server\x64\debug\lobby_server.tlog\link.read.1.tlog
 e:\github\source\lobby_server\x64\debug\lobby_server.tlog\link.write.1.tlog
+e:\github\source\lobby_server\x64\debug\lobby_server.tlog\lobby_server.write.1u.tlog

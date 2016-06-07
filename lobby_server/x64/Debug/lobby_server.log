@@ -1,4 +1,80 @@
-﻿  lobby_server.cpp
+﻿  stdafx.cpp
+  UserLobby.cpp
 e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TcpSocket.cpp
+  TcpListenSocket.cpp
+  TcpAct.cpp
+  SimpleRpcClient.cpp
+  Sender.cpp
+  redis.cpp
+e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Receiver.cpp
+  Object.cpp
+e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  network.cpp
+e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Mysql.cpp
+e:\github\source\lobby_server\mysql.cpp(20): warning C4273: 'CMysql::CMysql': dll 링크가 일치하지 않습니다.
+  e:\github\source\lobby_server\mysql.h(21): note: '{ctor}'의 이전 정의를 참조하십시오.
+e:\github\source\lobby_server\mysql.cpp(25): warning C4273: 'CMysql::~CMysql': dll 링크가 일치하지 않습니다.
+  e:\github\source\lobby_server\mysql.h(22): note: '{dtor}'의 이전 정의를 참조하십시오.
+e:\github\source\lobby_server\mysql.cpp(30): warning C4273: 'CMysql::initialize_mysql': dll 링크가 일치하지 않습니다.
+  e:\github\source\lobby_server\mysql.h(25): note: 'initialize_mysql'의 이전 정의를 참조하십시오.
+e:\github\source\lobby_server\mysql.cpp(121): warning C4273: 'CMysql::Call': dll 링크가 일치하지 않습니다.
+  e:\github\source\lobby_server\mysql.h(43): note: 'Call'의 이전 정의를 참조하십시오.
+e:\github\source\lobby_server\mysql.cpp(132): warning C4273: 'CMysql::Call': dll 링크가 일치하지 않습니다.
+  e:\github\source\lobby_server\mysql.h(44): note: 'Call'의 이전 정의를 참조하십시오.
+e:\github\source\lobby_server\mysql.cpp(146): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1183): note: 'getenv' 선언을 참조하십시오.
+e:\github\source\lobby_server\mysql.cpp(200): warning C4101: 'dwError' :참조되지 않은 지역 변수입니다.
+  lobby_server.cpp
+e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Disconnector.cpp
+  Cworld.cpp
+  Croom_manager.cpp
+e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Croom.cpp
+e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\croom.cpp(115): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\croom.cpp(203): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'SOCKET'입니다.
+  e:\github\source\lobby_server\croom.cpp(203): note: 서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+  e:\github\source\lobby_server\croom.cpp(203): note: 서식 문자열에서 '%Id'을(를) 사용하는 것이 좋습니다.
+  e:\github\source\lobby_server\croom.cpp(203): note: 서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+  ClientManager.cpp
+e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\clientmanager.cpp(589): warning C4244: '=': 'SOCKET'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\clientmanager.cpp(644): warning C4244: '인수': 'SOCKET'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Act.cpp
+e:\github\source\lobby_server\object.h(123): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\object.h(135): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\act.cpp(27): warning C4244: '인수': 'SOCKET'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\act.cpp(38): warning C4311: '형식 캐스팅': 'SOCKETINFO *'에서 'DWORD'(으)로 포인터가 잘립니다.
+e:\github\source\lobby_server\act.cpp(38): warning C4302: '형식 캐스팅': 'SOCKETINFO *'에서 'DWORD'(으)로 잘립니다.
+e:\github\source\lobby_server\act.cpp(51): warning C4244: '인수': 'SOCKET'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\act.cpp(24): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'SOCKET'입니다.
+  e:\github\source\lobby_server\act.cpp(24): note: 서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+  e:\github\source\lobby_server\act.cpp(24): note: 서식 문자열에서 '%Id'을(를) 사용하는 것이 좋습니다.
+  e:\github\source\lobby_server\act.cpp(24): note: 서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+e:\github\source\lobby_server\act.cpp(126): warning C4244: '인수': 'SOCKET'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\github\source\lobby_server\act.cpp(122): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'SOCKET'입니다.
+  e:\github\source\lobby_server\act.cpp(122): note: 서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+  e:\github\source\lobby_server\act.cpp(122): note: 서식 문자열에서 '%Id'을(를) 사용하는 것이 좋습니다.
+  e:\github\source\lobby_server\act.cpp(122): note: 서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+e:\github\source\lobby_server\act.cpp(144): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'SOCKET'입니다.
+  e:\github\source\lobby_server\act.cpp(144): note: 서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+  e:\github\source\lobby_server\act.cpp(144): note: 서식 문자열에서 '%Id'을(를) 사용하는 것이 좋습니다.
+  e:\github\source\lobby_server\act.cpp(144): note: 서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+  Acceptor.cpp
+  코드를 생성하고 있습니다...
+     E:\GitHub\source\x64\Debug\lobby_server.lib 라이브러리 및 E:\GitHub\source\x64\Debug\lobby_server.exp 개체를 생성하고 있습니다.
+lobby_server.obj : warning LNK4217: 지역으로 정의된 ??0CMysql@@QEAA@XZ (public: __cdecl CMysql::CMysql(void)) 기호를 "void __cdecl `dynamic initializer for 'p_mysql''(void)" (??__Ep_mysql@@YAXXZ) 함수로 가져왔습니다.
+lobby_server.obj : warning LNK4217: 지역으로 정의된 ?initialize_mysql@CMysql@@QEAA_NXZ (public: bool __cdecl CMysql::initialize_mysql(void)) 기호를 main 함수로 가져왔습니다.
   lobby_server.vcxproj -> E:\GitHub\source\x64\Debug\lobby_server.exe

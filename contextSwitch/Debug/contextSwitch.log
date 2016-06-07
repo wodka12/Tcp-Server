@@ -1,2 +1,23 @@
-﻿  Mysql.cpp
+﻿  stdafx.cpp
+  redis.cpp
+  pcMonster.cpp
+  network.cpp
+  contextSwitch.cpp
+  UserLobby.cpp
+  TcpSocket.cpp
+  TcpListenSocket.cpp
+  TcpAct.cpp
+  Sender.cpp
+  Receiver.cpp
+  Object.cpp
+  ObjManager.cpp
+  Mysql.cpp
 e:\github\source\contextswitch\mysql.cpp(14): fatal error C1083: 포함 파일을 열 수 없습니다. 'BasicMessage.h': No such file or directory
+  Disconnector.cpp
+  Cworld.cpp
+  Croom_manager.cpp
+  Croom.cpp
+  ClientManager.cpp
+  Act.cpp
+  Acceptor.cpp
+  코드를 생성하고 있습니다...
