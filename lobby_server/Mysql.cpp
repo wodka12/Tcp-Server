@@ -5,11 +5,6 @@
 #include <iostream>
 //#pragma comment(lib, "lib_acl_cpp_vc2015d.lib")
 
-#import "E:\GitHub\source\test_dll\bin\Debug\test_dll.tlb" raw_interfaces_only
-
-#import "E:\GitHub\source\testdll2\bin\Debug\testdll2.tlb" raw_interfaces_only
-
-
 #define DB_HOST "localhost"
 #define DB_USER "root"
 #define DB_PASS "root"
@@ -25,7 +20,6 @@ CMysql::~CMysql()
 {
 }
 
-using namespace testdll2;
 bool CMysql::initialize_mysql(void)
 {
 
@@ -64,7 +58,12 @@ bool CMysql::initialize_mysql(void)
 	printf("[%s]_DB Connection OK\n", DB_NAME);
 
 	mysql_close(&mysql);
+}
 
+
+
+bool CMysql::initialize_AMQ(void)
+{
 	//AMQ TEST 2016.05.26
 	m_channel = AmqpClient::Channel::Create("localhost");
 
@@ -94,12 +93,10 @@ bool CMysql::initialize_mysql(void)
 		//m_channel->BasicConsume(m_incoming_tag, "", true, true, false, 2);
 
 		//call
-		string message = "30";
-		Call(message);
 
 #endif //rpc test
 
-	}
+}
 	//AMQ TEST 2016.05.26
 #endif
 
@@ -116,6 +113,15 @@ bool CMysql::initialize_mysql(void)
 	return true;
 	//printf(mysql_get_client_info());
 }
+
+bool CMysql::rpc_send(string arg)
+{
+	string message = "30";
+	Call(message);
+
+	return true;
+}
+
 
 string CMysql::Call(const string &message)
 {
@@ -146,9 +152,9 @@ AmqpClient::BasicMessage::ptr_t CMysql::Call(AmqpClient::BasicMessage::ptr_t mes
 	char *szBroker = getenv("AMQP_BROKER");
 
 	if (szBroker != NULL)
-		m_channel = AmqpClient::Channel::Create("localhost");
+		m_channel = AmqpClient::Channel::Create("54.178.95.142");
 	else
-		m_channel = AmqpClient::Channel::Create("localhost");
+		m_channel = AmqpClient::Channel::Create("54.178.95.142");
 
 	AmqpClient::BasicMessage::ptr_t the_message = AmqpClient::BasicMessage::Create("Body Content");
 	try
@@ -172,19 +178,10 @@ AmqpClient::BasicMessage::ptr_t CMysql::Call(AmqpClient::BasicMessage::ptr_t mes
 		message->ReplyTo(m_incoming_tag);
 
 		//m_channel->BasicPublish("", m_outgoing_tag, message, true, false);
-		m_channel->BasicPublish("", "rpc_queue7", message, true, false);
+		m_channel->BasicPublish("", "rpc_queue", message, true, false);
 
-#if 0
-		for (int i = 0; i < 2; ++i)
-		{
-			AmqpClient::Envelope::ptr_t env;
 
-			if (m_channel->BasicConsumeMessage("consumer_tag1", env, 0))
-			{
-				std::cout << "Received message with body: " << env->Message()->Body() << std::endl;
-			}
-		}
-#endif
+#if 1 // rpc리플라이 메세지 수신 설정 현재는 무제한대기처리탓으로 잠시 빼두자
 		AmqpClient::Envelope::ptr_t env;
 		while (1) {
 			AmqpClient::Envelope::ptr_t env;
@@ -195,6 +192,7 @@ AmqpClient::BasicMessage::ptr_t CMysql::Call(AmqpClient::BasicMessage::ptr_t mes
 				break;
 			}
 		}
+#endif
 
 	}
 	catch (DWORD dwError)

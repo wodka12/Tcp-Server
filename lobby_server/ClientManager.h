@@ -77,9 +77,8 @@ public:
 	/* 2016.05.23 */
 
 	/* 2016.05.24 */
-	void recv_packet_user_exit_room(int user_fd, int room_num);
+	void recv_packet_user_exit_room(int user_fd, int room_num, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
 	int packet_lobby_proc(ObjectUser::User*, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
-	void recv_packet_user_broadcast_room(int user_fd, int room_num);
 	/* 2016.05.24 */
 
 	/* 2016.05.31 */

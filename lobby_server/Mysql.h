@@ -23,6 +23,8 @@ public:
 
 public:
 	bool initialize_mysql(void);
+	bool initialize_AMQ(void);
+	bool rpc_send(string arg);
 
 	//by lsy 16.06.01
 public:

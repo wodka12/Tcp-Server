@@ -29,7 +29,10 @@ public:
 	/* get user count in room*/
 	int get_user_cnt_in_room(void);
 
-	/* broadcast room */
-	int user_broadcast_room(int fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
+	/* broadcast room join*/
+	int user_broadcast_room_join(int fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
+
+	/* broadcast room exit */
+	int user_broadcast_room_exit(int fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
 };
 

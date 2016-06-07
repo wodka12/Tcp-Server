@@ -121,7 +121,7 @@ int Croom::get_user_cnt_in_room()
 /* counting user in room                 */
 /* by lsy 16.05.24                       */
 /*****************************************/
-int Croom::user_broadcast_room(int fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
+int Croom::user_broadcast_room_join(int fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
 {
 	int ret = 0;
 	char *test_msg = "broadcast";
@@ -210,6 +210,104 @@ int Croom::user_broadcast_room(int fd, SOCKETINFO* p_socket_info, CStreamSP* pSt
 		}
 	}
 	
+
+	return ret;
+}
+
+//2016.06.07 by lsy
+/*****************************************/
+/* counting user in room                 */
+/* by lsy 16.06.07                       */
+/*****************************************/
+int Croom::user_broadcast_room_exit(int fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
+{
+	int ret = 0;
+	char *test_msg = "broadcast";
+
+	/**********************/
+	/* packet return      */
+	/**********************/
+	CStream* p_wStream = *pStreamSP;
+	BYTE send_packet[24];
+	USHORT p_Head = P_CLIENT_TO_SERVER_MSG;
+	USHORT p_s_Head = P_S_CLIENT_EXIT_GAME_ACK;
+
+	/****************/
+	/* Open Stream  */
+	/****************/
+	memset(send_packet, 0, sizeof(send_packet));
+	p_wStream->StartWrite(send_packet);
+	p_wStream->WriteData(&p_Head);
+	p_wStream->WriteData(&p_s_Head);
+
+	int temp_userid[4] = { 12,34,56,78 };
+
+	p_wStream->WriteData(&temp_userid[0]);
+	p_wStream->WriteData(&temp_userid[1]);
+	p_wStream->WriteData(&temp_userid[2]);
+	p_wStream->WriteData(&temp_userid[3]);
+	/****************/
+	/* Close Stream */
+	/****************/
+	p_wStream->EndWrite();
+	memcpy(p_socket_info->dataBuf.buf, send_packet, sizeof(send_packet));
+
+	DWORD writen = 0;
+#if 0
+	/* return message by send socket */
+	if (WSASend(fd,
+		(WSABUF*)&p_socket_info->dataBuf,
+		1,
+		(DWORD *)&writen,
+		0,
+		&p_socket_info->overlapped,
+		NULL) == SOCKET_ERROR) {
+		if (WSAGetLastError() != WSA_IO_PENDING) {
+			printf("WSASend Error.. [%d] \n", WSAGetLastError());
+		}
+	}
+#endif
+
+	ObjectUser* pObjUser = pClientManager->FindUser(fd);
+
+
+	if (vec_user_room.size() > 0)
+	{
+		for (std::vector<ObjectUser*>::iterator iter = vec_user_room.begin(); iter != vec_user_room.end(); )
+		{
+			if ((*iter)->user_socket_info->fd != fd) //현재fd도 asyncsend처리시 브로드캐스트가 끝나고 write-iooperation가 변경되는 문제가있음
+			{
+				//client context를 wr로 변경
+				(*iter)->user_socket_info->IOOperation = ClientIoWrite;
+
+				memcpy((*iter)->user_socket_info->dataBuf.buf, send_packet, sizeof(send_packet));
+
+				writen = 0;
+
+				//16.06.01
+				if (WSASend(
+					(*iter)->user_socket_info->fd,
+					(WSABUF*)&(*iter)->user_socket_info->dataBuf,
+					1,
+					(DWORD *)&writen,
+					0,
+					&(*iter)->user_socket_info->overlapped,
+					NULL) == SOCKET_ERROR) {
+					if (WSAGetLastError() != WSA_IO_PENDING) {
+						printf("WSASend Error.. [%d] \n", WSAGetLastError());
+					}
+				}
+				else {
+					printf("WSASend to [%d]\n", (*iter)->user_socket_info->fd);
+				}
+#if 0 //backup
+				(*iter)->notify((char*)send_packet);
+#endif
+			}
+			iter++;
+		}
+	}
+
 
 	return ret;
 }

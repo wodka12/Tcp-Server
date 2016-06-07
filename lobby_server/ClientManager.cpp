@@ -1,6 +1,7 @@
 ﻿#include "stdafx.h"
 #include "ClientManager.h"
 #include "Croom_manager.h"
+#include "Mysql.h" //16.06.07
 
 
 /* 2016.05.23*/
@@ -279,7 +280,7 @@ void ClientManager::recv_packet_user_join_room(int user_fd, SOCKETINFO* p_socket
 		user_cnt_room = pRoommanager->get_user_cnt_in_room(room_num);
 		if (user_cnt_room == MAX_ROOM_USER_CNT)
 		{
-			pRoommanager->broadcast_room(room_num, user_fd, p_socket_info, pStreamSP);
+			pRoommanager->broadcast_room(room_num, user_fd, p_socket_info, pStreamSP, 0);
 		}
 	}
 	/**********************/
@@ -322,8 +323,11 @@ void ClientManager::recv_packet_user_join_room(int user_fd, SOCKETINFO* p_socket
 }
 /* 2016.05.23 end */
 
+
+extern CMysql* p_mysql;
+
 /* 2016.05.24 */
-void ClientManager::recv_packet_user_exit_room(int user_fd, int room_num)
+void ClientManager::recv_packet_user_exit_room(int user_fd, int room_num, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
 {
 	bool b_success = false;
 
@@ -332,63 +336,19 @@ void ClientManager::recv_packet_user_exit_room(int user_fd, int room_num)
 		pRoommanager = new Croom_manager;
 	}
 
-	//b_success = pRoommanager->create_room(user_fd);
-
-	//if (b_success == false)
-	{
-		//room_num = pRoommanager->scan_empty_room();
-		pRoommanager->exit_room(room_num, user_fd);
-	}
-	/**********************/
-	/* packet return      */
-	/**********************/
-	CStream* p_wStream = *pStreamSP;
-	BYTE send_packet[24];
-	USHORT p_Head = P_LOBBY_MSG;
-	USHORT p_s_Head = P_S_QUIT_ROOM;
-
-	/****************/
-	/* Open Stream  */
-	/****************/
-	memset(send_packet, 0, sizeof(send_packet));
-	p_wStream->StartWrite(send_packet);
-	p_wStream->WriteData(&p_Head);
-	p_wStream->WriteData(&p_s_Head);
-	/****************/
-	/* Close Stream */
-	/****************/
-	p_wStream->EndWrite();
-	memcpy(pc_socket_info->dataBuf.buf, send_packet, sizeof(send_packet));
-
-	DWORD writen = 0;
-	/* return message by send socket */
-	if (WSASend(user_fd,
-		(WSABUF*)&pc_socket_info->dataBuf,
-		1,
-		(DWORD *)&writen,
-		0,
-		&pc_socket_info->overlapped,
-		NULL) == SOCKET_ERROR) {
-		if (WSAGetLastError() != WSA_IO_PENDING) {
-			printf("WSASend Error.. [%d] \n", WSAGetLastError());
-		}
-	}
-
-}
-
-
-/* 2016.05.24 */
-void ClientManager::recv_packet_user_broadcast_room(int user_fd, int room_num)
-{
-	bool b_success = false;
-
-	if (pRoommanager == NULL)
-	{
-		pRoommanager = new Croom_manager;
-	}
-
+#if 1
+	//16.06.07 by lsy
 	pRoommanager->exit_room(room_num, user_fd);
 
+	//16.06.07 by lsy RPC send/return
+
+	p_mysql->rpc_send("30");
+
+	pRoommanager->broadcast_room(room_num, user_fd, p_socket_info, pStreamSP, 1);
+
+	//16.06.07
+
+#endif
 	/**********************/
 	/* packet return      */
 	/**********************/
@@ -425,6 +385,7 @@ void ClientManager::recv_packet_user_broadcast_room(int user_fd, int room_num)
 	}
 
 }
+
 
 int ClientManager::packet_lobby_proc(ObjectUser::User* info, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
 {
@@ -437,7 +398,7 @@ int ClientManager::packet_lobby_proc(ObjectUser::User* info, SOCKETINFO* p_socke
 		recv_packet_user_join_room(info->id, p_socket_info, pStreamSP);
 		break;
 	case P_S_QUIT_ROOM:
-		recv_packet_user_exit_room(info->id, info->room_num);
+		recv_packet_user_exit_room(info->id, info->room_num, p_socket_info, pStreamSP);
 		break;
 	case P_S_BROADCAST_ROOM:
 		break;

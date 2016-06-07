@@ -154,7 +154,7 @@ int Croom_manager::exit_room(int room_num, int user_fd)
 /* user broadcast to other user in room  */
 /* by lsy 16.05.24                       */
 /*****************************************/
-int Croom_manager::broadcast_room(int room_num, int user_fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
+int Croom_manager::broadcast_room(int room_num, int user_fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP, int flag)
 {
 	int ret = 0;
 
@@ -163,7 +163,16 @@ int Croom_manager::broadcast_room(int room_num, int user_fd, SOCKETINFO* p_socke
 	it_room = map_room.find(room_num);
 	Croom* p_room = it_room->second;
 
-	p_room->user_broadcast_room(user_fd, p_socket_info, pStreamSP);
+	//by lsy 16.06.07
+	if (flag == 0)
+	{
+		p_room->user_broadcast_room_join(user_fd, p_socket_info, pStreamSP);
+	}
+	else if(flag == 1)
+	{
+		p_room->user_broadcast_room_exit(user_fd, p_socket_info, pStreamSP);
+	}
+
 
 	printf("...broadcast [%d] room \n",  room_num);
 

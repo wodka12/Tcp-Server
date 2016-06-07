@@ -57,7 +57,7 @@ void network::initialize_network()
 	memset(&serv_addr, 0, sizeof(serv_addr));
 	serv_addr.sin_family = AF_INET;
 	serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-	serv_addr.sin_port = htons(atoi("3999"));
+	serv_addr.sin_port = htons(atoi("3001"));
 
 	if (connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) == -1) {
 		printf("Connect() error...");
