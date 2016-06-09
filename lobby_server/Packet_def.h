@@ -1,4 +1,4 @@
-#ifndef _PACKET_DEF_
+﻿#ifndef _PACKET_DEF_
 #define _PACKET_DEF_
 
 /* 
@@ -16,6 +16,7 @@ typedef enum e_Packet {
 	P_LOBBY_MSG = 0x11, /* 2016.05.23 */
 	P_SERVER_RELAY_MSG = 0x12, /* 2016.05.31 */
 	P_CLIENT_TO_SERVER_MSG = 0x14, /* 2016.05.31 */
+	P_BATTLE_MSG = 0x18, /* 2016.06.09 */
 	P_MAX			= 0xFF,
 } e_packet_def;
 
@@ -58,4 +59,21 @@ typedef enum e_Packet_Client_to_Server {
 	P_S_CLIENT_EXIT_GAME_REQ = 0x02,
 	P_S_CLIENT_EXIT_GAME_ACK = 0x04,
 } e_packet_client_to_server;
+
+
+typedef enum e_Packet_Battle {
+	P_S_BATTLE_START		 = 0x00, //배틀 시작
+	P_S_BATTLE_END		     = 0x01, //배틀 끝
+
+	P_S_GS_TO_C_START_WAVE	 = 0x02, //웨이브 시작
+	P_S_GS_TO_C_END_WAVE	 = 0x04, //웨이브 끝
+
+	P_S_SELECT_CARD_START	 = 0x08, //카드 선택
+	P_S_SELECT_CARD_END		 = 0x11, //카드 선택 끝
+	P_S_PLAYER_USE_CARD		 = 0x12, //카드 사용
+
+	P_S_NOTIFY_TURN_START	 = 0x14, //턴 시작
+	P_S_NOTIFY_TURN_END		 = 0x18, //턴 종료 + 패보충
+} e_packet_battle_msg;
+
 #endif

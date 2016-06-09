@@ -17,7 +17,7 @@ public:
 	int scan_empty_room(void);
 	/* 2016.05.23*/
 
-	bool create_room(int user_fd);
+	bool create_room(int user_fd, int* room_num);
 	void delete_room(void);
 
 	int allotate_room(int room_num, int user_fd);
@@ -25,7 +25,7 @@ public:
 
 	/* 2016.05.24 */
 	int exit_room(int room_num, int user_fd);
-	int broadcast_room(int room_num, int user_fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP, int flag); 
+	int broadcast_room(ObjectUser* info, CStreamSP* pStreamSP, int flag);
 	//flag:0 = join , 1 = exit 현재 테스트버젼 좀더 세분화 시킬필요가 있음 예로 룸별로 브로드캐스팅이냐 로비 전체냐 패킷종류는 무엇이냐.등등등..
 	
 	/* 2016.05.24 */

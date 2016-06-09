@@ -73,17 +73,20 @@ public:
 	/* 2016.05.19*/
 
 	/* 2016.05.23 */
-	void recv_packet_user_join_room(int user_fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
+	void recv_packet_user_join_room(ObjectUser* info, CStreamSP* pStreamSP);
 	/* 2016.05.23 */
 
 	/* 2016.05.24 */
-	void recv_packet_user_exit_room(int user_fd, int room_num, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
-	int packet_lobby_proc(ObjectUser::User*, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
+	void recv_packet_user_exit_room(ObjectUser* info, CStreamSP* pStreamSP);
+	int packet_lobby_proc(ObjectUser*, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
 	/* 2016.05.24 */
 
 	/* 2016.05.31 */
 	int packet_client_to_server_proc(ObjectUser::User*, SOCKETINFO*);
 	/* 2016.05.31 */
+
+	/* 2016.06.09 */
+	int recv_packet_battle_proc(ObjectUser* info, CStreamSP* pStreamSP);
 
 
 	void broadcast_userinfo_zone(int own, ObjectUser::User* info);

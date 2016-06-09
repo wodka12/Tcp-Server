@@ -209,7 +209,6 @@ int Croom::user_broadcast_room_join(int fd, SOCKETINFO* p_socket_info, CStreamSP
 			iter++;
 		}
 	}
-	
 
 	return ret;
 }
@@ -341,3 +340,82 @@ int Croom::user_broadcast_room(int fd)
 	return ret;
 }
 #endif
+
+
+//2016.06.09 by lsy
+/*************************************************************/
+/* broadcasting selected card to other user in sameroom      */
+/* by lsy 16.06.09                                           */
+/*************************************************************/
+int Croom::user_broadcast_selected_card(ObjectUser* info, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
+{
+	int ret = 0;
+	char *test_msg = "broadcast";
+
+	/**********************/
+	/* packet return      */
+	/**********************/
+	CStream* p_wStream = *pStreamSP;
+	BYTE send_packet[24];
+	USHORT p_Head = P_BATTLE_MSG;
+	USHORT p_s_Head = P_S_SELECT_CARD_START;
+
+	/****************/
+	/* Open Stream  */
+	/****************/
+	memset(send_packet, 0, sizeof(send_packet));
+	p_wStream->StartWrite(send_packet);
+	p_wStream->WriteData(&p_Head);
+	p_wStream->WriteData(&p_s_Head);
+	p_wStream->WriteData(&info->sUser_info.select_card);
+
+	/****************/
+	/* Close Stream */
+	/****************/
+	p_wStream->EndWrite();
+	memcpy(p_socket_info->dataBuf.buf, send_packet, sizeof(send_packet));
+
+	DWORD writen = 0;
+
+	ObjectUser* pObjUser = pClientManager->FindUser(info->sUser_info.id);
+
+
+	/****************/
+	/* broadcast    */
+	/****************/
+	if (vec_user_room.size() > 0)
+	{
+		for (std::vector<ObjectUser*>::iterator iter = vec_user_room.begin(); iter != vec_user_room.end(); )
+		{
+			if ((*iter)->user_socket_info->fd != info->sUser_info.id) //현재fd도 asyncsend처리시 브로드캐스트가 끝나고 write-iooperation가 변경되는 문제가있음
+			{
+				//client context를 wr로 변경
+				(*iter)->user_socket_info->IOOperation = ClientIoWrite;
+
+				memcpy((*iter)->user_socket_info->dataBuf.buf, send_packet, sizeof(send_packet));
+
+				writen = 0;
+
+				if (WSASend(
+					(*iter)->user_socket_info->fd,
+					(WSABUF*)&(*iter)->user_socket_info->dataBuf,
+					1,
+					(DWORD *)&writen,
+					0,
+					&(*iter)->user_socket_info->overlapped,
+					NULL) == SOCKET_ERROR) {
+					if (WSAGetLastError() != WSA_IO_PENDING) {
+						printf("WSASend Error.. [%d] \n", WSAGetLastError());
+					}
+				}
+				else {
+					printf("WSASend to [%d]\n", (*iter)->user_socket_info->fd);
+				}
+			}
+			iter++;
+		}
+	}
+
+
+	return ret;
+}

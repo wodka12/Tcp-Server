@@ -67,6 +67,7 @@ public:
 		char msg[20];
 
 		int room_num;
+		int select_card;
 	};
 
 	User sUser_info;

@@ -2,6 +2,7 @@
 #include "Act.h"
 #include "network.h"
 #include "ClientManager.h"
+#include "battle_mgr.h"
 
 extern ClientManager* pClientManager;
 
@@ -221,6 +222,14 @@ unsigned int WINAPI Proactor::SignalProc(LPVOID lpParam)
 	static int run_dly = 0;
 
 	while (1) {
+		/* by lsy 16.06.09
+		배틀룸전체 스케쥴러는 이곳에서 전부 갱신한다.
+		방추가삭제가 이뤄지면서 업데이트시 메모리검색식을돌리면
+		뻑날 소지가 있으므로 이후에 뮤텍스로 씌우던지 싱글오브젝트방식을 도입하자.
+		주의할점은 클라이언트매니져에있는 자원을 여기서 갱신해버리면 무거워질수있따.
+		네트워크처리나 게임오브젝트들은 전부 워커에서 관리한다.
+		시그널스레드는 잠재적으로 스케쥴러 갱신용도로만 쓴다. */
+		BATTLE_MGR.update_game();
 		Sleep(50);
 	}
 	return 1;

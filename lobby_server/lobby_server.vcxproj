@@ -148,6 +148,9 @@
   <ItemGroup>
     <ClInclude Include="Acceptor.h" />
     <ClInclude Include="Act.h" />
+    <ClInclude Include="battle_info.h" />
+    <ClInclude Include="battle_mgr.h" />
+    <ClInclude Include="battle_schedules.h" />
     <ClInclude Include="ClientManager.h" />
     <ClInclude Include="Croom.h" />
     <ClInclude Include="Croom_manager.h" />
@@ -162,6 +165,7 @@
     <ClInclude Include="Receiver.h" />
     <ClInclude Include="Sender.h" />
     <ClInclude Include="SimpleRpcClient.h" />
+    <ClInclude Include="Singleton.h" />
     <ClInclude Include="src_define.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -173,6 +177,9 @@
   <ItemGroup>
     <ClCompile Include="Acceptor.cpp" />
     <ClCompile Include="Act.cpp" />
+    <ClCompile Include="battle_info.cpp" />
+    <ClCompile Include="battle_mgr.cpp" />
+    <ClCompile Include="battle_schedules.cpp" />
     <ClCompile Include="ClientManager.cpp" />
     <ClCompile Include="Croom.cpp" />
     <ClCompile Include="Croom_manager.cpp" />

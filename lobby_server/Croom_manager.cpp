@@ -3,6 +3,8 @@
 #include "Mysql.h"
 #include "IDGenerator.h"
 
+#include "battle_mgr.h"
+
 extern CMysql* p_mysql;
 
 /* by lsy 2016.05.31 token generator */
@@ -46,7 +48,7 @@ int Croom_manager::scan_empty_room(void)
 /* room manger create to room            */
 /* by lsy 16.05.24                       */
 /*****************************************/
-bool Croom_manager::create_room(int user_fd)
+bool Croom_manager::create_room(int user_fd, int* room_num)
 {
 	bool ret = false;
 	
@@ -71,6 +73,8 @@ bool Croom_manager::create_room(int user_fd)
 
 		printf("...create room [room number = %d]\n ", temp_room_idx);
 	}
+
+	*room_num = temp_room_idx;
 
 	return ret;
 }
@@ -154,27 +158,30 @@ int Croom_manager::exit_room(int room_num, int user_fd)
 /* user broadcast to other user in room  */
 /* by lsy 16.05.24                       */
 /*****************************************/
-int Croom_manager::broadcast_room(int room_num, int user_fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP, int flag)
+int Croom_manager::broadcast_room(ObjectUser* info, CStreamSP* pStreamSP, int flag)
 {
 	int ret = 0;
 
 	unordered_map<int, Croom*>::iterator it_room;
 
-	it_room = map_room.find(room_num);
+	it_room = map_room.find(info->sUser_info.room_num);
 	Croom* p_room = it_room->second;
 
 	//by lsy 16.06.07
 	if (flag == 0)
 	{
-		p_room->user_broadcast_room_join(user_fd, p_socket_info, pStreamSP);
+		p_room->user_broadcast_room_join(info->sUser_info.id, info->user_socket_info, pStreamSP);
 	}
 	else if(flag == 1)
 	{
-		p_room->user_broadcast_room_exit(user_fd, p_socket_info, pStreamSP);
+		p_room->user_broadcast_room_exit(info->sUser_info.id, info->user_socket_info, pStreamSP);
+	}
+	else if (flag == 2)
+	{
+		p_room->user_broadcast_selected_card(info, info->user_socket_info, pStreamSP);
 	}
 
-
-	printf("...broadcast [%d] room \n",  room_num);
+	printf("...broadcast [%d] room \n",  info->sUser_info.room_num);
 
 	return ret;
 }

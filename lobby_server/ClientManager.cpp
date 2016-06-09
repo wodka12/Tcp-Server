@@ -2,10 +2,11 @@
 #include "ClientManager.h"
 #include "Croom_manager.h"
 #include "Mysql.h" //16.06.07
+#include "battle_mgr.h" //16.06.09
 
 
 /* 2016.05.23*/
-static Croom_manager* pRoommanager;
+Croom_manager* pRoommanager;
 /* 2016.05.23*/
 
 void ClientManager::InitClientManager()
@@ -258,7 +259,7 @@ void ClientManager::broadcast_success_login(int user_fd)
 
 
 /* 2016.05.23 */
-void ClientManager::recv_packet_user_join_room(int user_fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
+void ClientManager::recv_packet_user_join_room(ObjectUser* info, CStreamSP* pStreamSP)
 {
 	bool b_success = false;
 	int room_num = 0;
@@ -269,20 +270,27 @@ void ClientManager::recv_packet_user_join_room(int user_fd, SOCKETINFO* p_socket
 		pRoommanager = new Croom_manager;
 	}
 
-	b_success = pRoommanager->create_room(user_fd);
+	b_success = pRoommanager->create_room(info->sUser_info.id, &room_num);
 
 	if (b_success == false)
 	{
 		room_num = pRoommanager->scan_empty_room();
-		pRoommanager->allotate_room(room_num, user_fd);
+		pRoommanager->allotate_room(room_num, info->sUser_info.id);
 
+		/*
+		//16.06.09 호스트로부터 스타트 신호가오면 실행하도록 배틀패킷쪽으로 이동
 		//by lsy 16.05.31 방배정직후 인원수가 꽉차면 룸 멤버에게 브로드캐스팅
 		user_cnt_room = pRoommanager->get_user_cnt_in_room(room_num);
 		if (user_cnt_room == MAX_ROOM_USER_CNT)
 		{
 			pRoommanager->broadcast_room(room_num, user_fd, p_socket_info, pStreamSP, 0);
 		}
+		*/
 	}
+
+	//마지막입장유저에게 유저수를 반환. 방이 꽉찬 상태만 통지. 방장에게 알리는 처리는 추후에
+	user_cnt_room = pRoommanager->get_user_cnt_in_room(room_num);
+
 	/**********************/
 	/* packet return      */
 	/**********************/
@@ -299,6 +307,7 @@ void ClientManager::recv_packet_user_join_room(int user_fd, SOCKETINFO* p_socket
 	p_wStream->StartWrite(send_packet);
 	p_wStream->WriteData(&p_Head);
 	p_wStream->WriteData(&p_s_Head);
+	p_wStream->WriteData(&user_cnt_room);
 	/****************/
 	/* Close Stream */
 	/****************/
@@ -307,7 +316,7 @@ void ClientManager::recv_packet_user_join_room(int user_fd, SOCKETINFO* p_socket
 
 	DWORD writen = 0;
 	/* return message by send socket */
-	if (WSASend(user_fd,
+	if (WSASend(info->sUser_info.id,
 		(WSABUF*)&pc_socket_info->dataBuf,
 		1,
 		(DWORD *)&writen,
@@ -327,7 +336,7 @@ void ClientManager::recv_packet_user_join_room(int user_fd, SOCKETINFO* p_socket
 extern CMysql* p_mysql;
 
 /* 2016.05.24 */
-void ClientManager::recv_packet_user_exit_room(int user_fd, int room_num, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
+void ClientManager::recv_packet_user_exit_room(ObjectUser* info, CStreamSP* pStreamSP)
 {
 	bool b_success = false;
 
@@ -338,13 +347,13 @@ void ClientManager::recv_packet_user_exit_room(int user_fd, int room_num, SOCKET
 
 #if 1
 	//16.06.07 by lsy
-	pRoommanager->exit_room(room_num, user_fd);
+	pRoommanager->exit_room(info->sUser_info.room_num, info->sUser_info.id);
 
-	//16.06.07 by lsy RPC send/return
+	//16.06.07 by lsy RPC send/return test
 
 	p_mysql->rpc_send("30");
 
-	pRoommanager->broadcast_room(room_num, user_fd, p_socket_info, pStreamSP, 1);
+	pRoommanager->broadcast_room(info, pStreamSP, 1);
 
 	//16.06.07
 
@@ -372,7 +381,7 @@ void ClientManager::recv_packet_user_exit_room(int user_fd, int room_num, SOCKET
 
 	DWORD writen = 0;
 	/* return message by send socket */
-	if (WSASend(user_fd,
+	if (WSASend(info->sUser_info.id,
 		(WSABUF*)&pc_socket_info->dataBuf,
 		1,
 		(DWORD *)&writen,
@@ -387,7 +396,7 @@ void ClientManager::recv_packet_user_exit_room(int user_fd, int room_num, SOCKET
 }
 
 
-int ClientManager::packet_lobby_proc(ObjectUser::User* info, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
+int ClientManager::packet_lobby_proc(ObjectUser* info, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP)
 {
 	int ret = 0;
 	USHORT packet_header_second = Read_Stream_Header_second(*pStreamSP);
@@ -395,10 +404,10 @@ int ClientManager::packet_lobby_proc(ObjectUser::User* info, SOCKETINFO* p_socke
 	switch (packet_header_second)
 	{
 	case P_S_JOIN_ROOM:
-		recv_packet_user_join_room(info->id, p_socket_info, pStreamSP);
+		recv_packet_user_join_room(info, pStreamSP);
 		break;
 	case P_S_QUIT_ROOM:
-		recv_packet_user_exit_room(info->id, info->room_num, p_socket_info, pStreamSP);
+		recv_packet_user_exit_room(info, pStreamSP);
 		break;
 	case P_S_BROADCAST_ROOM:
 		break;
@@ -409,7 +418,6 @@ int ClientManager::packet_lobby_proc(ObjectUser::User* info, SOCKETINFO* p_socke
 
 	return ret;
 }
-
 /* 2016.05.24 end */
 
 
@@ -599,10 +607,12 @@ USHORT ClientManager::Read_Stream_Header_second(CStream* clsStream)
 
 int ClientManager::Recv_Client_Packet(SOCKETINFO* socket_info, BYTE* packet)
 {
-	pc_socket_info = socket_info;
-
 	EnterCriticalSection(&cs);
 	ObjectUser *pObjectUser = FindUser(socket_info->fd);
+
+	//유저 구조체에서 소켓정보 빼올수있는지 실험 -> 성공
+	//pc_socket_info = socket_info;
+	pc_socket_info = pObjectUser->user_socket_info;
 
 	if (pObjectUser != NULL) {
 
@@ -628,13 +638,16 @@ int ClientManager::Recv_Client_Packet(SOCKETINFO* socket_info, BYTE* packet)
 			break;
 		case P_LOBBY_MSG:
 			//recv_packet_user_join_room(pObjectUser->sUser_info.id);
-			packet_lobby_proc(&pObjectUser->sUser_info, pc_socket_info, pStreamSP);
+			packet_lobby_proc(pObjectUser, pc_socket_info, pStreamSP);
 			break;
 		//16.05.31
 		case P_CLIENT_TO_SERVER_MSG:
 			packet_client_to_server_proc(&pObjectUser->sUser_info, pc_socket_info);
 			break;
-		//16.05.31
+		//16.06.09
+		case P_BATTLE_MSG:
+			recv_packet_battle_proc(pObjectUser, pStreamSP);
+			break;
 
 		case P_MAX:
 			break;
@@ -796,3 +809,42 @@ int ClientManager::packet_send_msg_proc(ObjectUser::User* p_user)
 	return true;
 }
 
+//배틀 관련 수신 프로토콜
+int ClientManager::recv_packet_battle_proc(ObjectUser* info, CStreamSP* pStreamSP)
+{
+	int ret = 0;
+	int selected_card_num = 0;
+
+	CStream *pStream = *pStreamSP;
+
+	USHORT packet_header_second = Read_Stream_Header_second(*pStreamSP);
+
+	switch (packet_header_second)
+	{
+	case P_S_BATTLE_START:
+		BATTLE_MGR.begin_game(info, pStreamSP);
+		break;
+	case P_S_BATTLE_END:
+		break;
+	case P_S_GS_TO_C_START_WAVE:
+		break;
+	case P_S_GS_TO_C_END_WAVE:
+		break;
+	case P_S_SELECT_CARD_START:
+		pStream->ReadData(&selected_card_num);
+		BATTLE_MGR.user_active(info, pStreamSP, user_active_select_card, selected_card_num);
+		break;
+	case P_S_SELECT_CARD_END:
+		break;
+	case P_S_PLAYER_USE_CARD:
+		break;
+	case P_S_NOTIFY_TURN_START:
+		break;
+	case P_S_NOTIFY_TURN_END:
+		break;
+	default:
+		break;
+	}
+
+	return ret;
+}

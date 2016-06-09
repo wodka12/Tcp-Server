@@ -34,5 +34,8 @@ public:
 
 	/* broadcast room exit */
 	int user_broadcast_room_exit(int fd, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
+
+	/* broadcast selected card */
+	int user_broadcast_selected_card(ObjectUser* info, SOCKETINFO* p_socket_info, CStreamSP* pStreamSP);
 };
 
