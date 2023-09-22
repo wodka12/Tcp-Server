@@ -1,0 +1,1 @@
+﻿Battle game logic using TCP server (for study)
